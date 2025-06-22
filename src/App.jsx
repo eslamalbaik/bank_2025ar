@@ -10,7 +10,8 @@ import LoginL from "./pages/Loginl";
 
 function App() {
   return (
-    <div className="bg-[#fff]">
+    <div className="bg-[#fff] ">
+         
     <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginL />} />

