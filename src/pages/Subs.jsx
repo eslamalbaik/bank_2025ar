@@ -83,6 +83,17 @@ const Subs = () => {
                   required
                 />
               </div>
+              <br />
+                 <div className="relative w-full">
+                <FaLock className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#202D5A] mt-1" />
+                <input
+                  className="bg-transparent border-[1px] w-full mt-2 border-[#202D5A] p-[12px] pr-10 rounded-md placeholder:text-[13px]  focus:outline-none focus:border-[#86b7fe]"
+                  type="phone"
+                  name="phone"
+                  placeholder="رقم الهاتف"
+                  required
+                />
+              </div>
               <button
                 className="w-1/2 flex justify-center items-center gap-3 cursor-pointer text-[#202D5A] bg-[#92D3C8] py-3 rounded-xl mt-4"
                 type="submit"

